@@ -36,6 +36,7 @@ class JobsController < ApplicationController
     end
   end
 
+
   def destroy
     @job = Job.find(params[:id])
 
@@ -47,7 +48,7 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :descripton)
+    params.require(:job).permit(:title, :description)
   end
 
 end
